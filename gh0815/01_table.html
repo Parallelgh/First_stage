@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表格</title>
+  </head>
+  <body>
+
+    <table border="1" cellpadding="20" cellspacing="0">
+    <!--
+      border       设置边框，默认为0，即无边框
+      cellpadding  设置单元格边框和单元格内容之间的间距
+      cellspacing  设置单元格边框之间的间距
+      width        设置表格宽度
+      height       设置表格高度
+      align        设置表格在网页中的水平对齐方式(left center right)
+    -->
+
+      <caption>        <!-- caption 用来设置表格标题，默认位于表格上居中 -->
+        <h1>学生信息</h1>
+      </caption>
+
+      <thead>
+
+        <tr>           <!-- tr 只能嵌套 td, th, 不能嵌套其它 -->
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+        </tr>
+
+      </thead>
+
+      <tbody align="center">
+
+        <tr>
+          <td>郭振</td>  <!-- td, th 就是容器， 什么标签都可嵌套 -->
+          <td>25</td>
+          <td>男</td>
+        </tr>
+
+        <tr>
+          <td>任杰</td>
+          <td>24</td>
+          <td>男</td>
+        </tr>
+
+        <tr>
+          <td>杨国庆</td>
+          <td>23</td>
+          <td>男</td>
+        </tr>
+
+        <tr>
+          <td>李剑</td>
+          <td>24</td>
+          <td>男</td>
+        </tr>
+
+      </tbody>
+
+      <tfoot>
+
+        <tr>
+          <td>foot1</td>
+          <td>foot2</td>
+          <td>
+            <table>
+
+              <tr>
+                <td>郭振</td>
+              </tr>
+              <tr>
+                <td>任杰</td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+
+      </tfoot>
+
+    </table>
+  </body>
+</html>
