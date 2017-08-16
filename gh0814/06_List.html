@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>list</title>
+  </head>
+  <body>
+
+    <!-- 无序列表，可以嵌套，尽量少嵌套 -->
+    <ul>
+      <li>列表项一</li>
+      <li>列表项二</li>
+      <li>列表项三</li>
+      <li>
+        列表项四
+        <ul>
+          <li>列表项五</li>
+          <li>列表项六</li>
+          <li>
+            列表项七
+            <ul>
+              <li>列表项八</li>
+              <li>列表项九</li>
+              <li>列表项十</li>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- 有序列表 不定义ol的start，默认从1开始，也可以嵌套 -->
+    <ol>
+      <li>列表项一</li>
+      <li>列表项二</li>
+      <li>列表项三</li>
+      <li value="6">
+        列表项四
+        <ol>
+          <li>列表项五</li><!-- 从序号1开始，以下的保持不变-->
+        </ol>
+      </li><!-- 序号从6开始 -->
+      <li>列表项六</li>
+      <li>列表项七</li>
+      <li>列表项八</li>
+    </ol>
+
+    <!-- 自定义列表，可嵌套 -->
+    <dl>
+      <dt>小标题</dt>
+      <dd>
+        第一项
+        <dl>
+          <dd>小小标题</dd>
+          <dd>小小项</dd>
+        </dl>
+      </dd>
+      <dd>第二项</dd>
+      <dd>第三项</dd>
+    </dl>
+
+  </body>
+</html>

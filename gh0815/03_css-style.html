@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!--
+  注意两点
+  一， style 位置在 head 里
+  二， style 中添加注释，用  /**/
+-->
+
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>css</title>
+
+    <link rel="stylesheet" href="./test.css">
+    <!--
+      rel 是固定格式，href 准确指明路径
+      引入外部样式，可以跨界面重复使用，即不同的代码界面可以公用，是公有的
+    -->
+
+    <style>
+
+      /*
+        style 标签中用于填写样式。
+      */
+      h1 {
+        color: red;
+      }
+      /* 嵌套样式， 只能在当前页面， 可以重复，不能跨页面使用， 相对于外部样式 */
+    </style>
+
+  </head>
+  <body>
+
+    <h1>大标题</h1>
+
+    <h2 style="color: red">小标题</h2>
+    <!-- 行内样式， 一般不适用， 较大的局限性， 如:不能写多个 -->
+
+    <h3>小小标题</h3>
+
+  </body>
+</html>
