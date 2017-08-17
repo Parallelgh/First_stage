@@ -19,6 +19,12 @@
         width: auto;
         height: 36px;
       }
+      .g1,.gs1 li{
+        float: left;
+      }
+      .g2,.gs2 li{
+        float: right;
+      }
       .gs1 li,.gs2 li {
         width: 85px;
         height: 20px;
@@ -27,12 +33,6 @@
         line-height: 20px;
         list-style: none;
         margin: 8px auto;
-      }
-      .g1,.gs1 li{
-        float: left;
-      }
-      .g2,.gs2 li{
-        float: right;
       }
       a {
         text-decoration: none;
@@ -50,7 +50,26 @@
         color: green;
       }
 
-      
+      .u1 {
+        margin-top: 50px;
+        margin-left: 30px;
+      }
+      .u2,.u3 {
+        margin-top: 50px;
+        margin-left: 222px;
+      }
+      .u1,.u2,.u3 {
+        float: left;
+      }
+      table {
+        border-collapse: collapse;
+        height: 100px;
+        width:  430px;
+      }
+      th {
+        border:1px solid green;
+      }
+
     </style>
   </head>
   <body>
@@ -74,14 +93,31 @@
 
       </div>
       <div class="s2">
-        <img src="./images/back.jpg" alt="">
+        <img style="width: 100%" src="./images/back.jpg">
       </div>
       <div class="s3">
         <div class="u1">
-          <img src="./images/360malllogo.png" width="120px" height="80px">
+          <img style="width: 120px; height: 80px" src="./images/360malllogo.png">
         </div>
-        <div class="u2"></div>
-        <div class="u3"></div>
+        <div class="u2">
+          <table>
+            <tbody>
+              <tr>
+                <th colspan="5"></th>
+                <th><button>搜索</button></th>
+              </tr>
+              <tr>
+                <td>360手机</td>
+                <td>360手表</td>
+                <td>360机器人</td>
+                <td>360路由器</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="u3">
+          <button>我的购物车</button>
+        </div>
       </div>
 
     </div>
