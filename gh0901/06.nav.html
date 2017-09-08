@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>会动的导航</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .f {
+        width: 800px;
+        margin: 500px auto;
+        perspective: 1000px;
+      }
+
+      ul {
+        width: 200px;
+        height: 100px;
+        float: left;
+        transition: all 3s;
+        transform-style: preserve-3d;
+      }
+
+      li {
+        width: 200px;
+        height: 100px;
+        list-style: none;
+        position: absolute;
+        font-size: 16px;
+        line-height: 100px;
+        text-align: center;
+      }
+
+      li:nth-child(1) {
+        background: yellow;
+        transform: translateZ(50px);
+      }
+
+      li:nth-child(2) {
+        background: pink;
+        transform: rotateX(90deg) translateZ(50px);
+      }
+
+      ul:hover {
+        transform: rotateX(-90deg);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="f">
+      <ul>
+        <li>首页</li>
+        <li>菜单</li>
+      </ul>
+      <ul>
+        <li>首页</li>
+        <li>菜单</li>
+      </ul>
+      <ul>
+        <li>首页</li>
+        <li>菜单</li>
+      </ul>
+      <ul>
+        <li>首页</li>
+        <li>菜单</li>
+      </ul>
+    </div>
+
+  </body>
+</html>

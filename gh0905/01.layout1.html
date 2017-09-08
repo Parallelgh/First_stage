@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>两栏布局,左侧固定,右侧宽度自适应</title>
+    <style media="screen">
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .box2_s,
+      .s2_s,
+      .t_s2s {
+        width: 50px;
+        height: 50px;
+        background: #000;
+      }
+
+      .f,
+      .t {
+        margin-top: 100px;
+      }
+
+
+
+
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+
+      .box2 {
+        position: absolute;
+        left: 200px;
+        top: 0;
+        right: 0;
+        height: 200px;
+        background: blue;
+      }
+
+
+
+
+
+      .s1 {
+        width: 200px;
+        height: 200px;
+        background: red;
+        float: left;
+      }
+
+      .s2 {
+        height: 200px;
+        background: blue;
+        margin-left: 200px;
+      }
+
+      .t {
+        display: flex;
+      }
+
+      .t_s1 {
+        width: 200px;
+        height: 200px;
+        background: red;
+
+        /* 设置伸缩盒子时,flex是父元素的,但可以给子元素设置以下属性及属性值,脱离父级flex*/
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .t_s2 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 200px;
+        background: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box1"></div>
+    <div class="box2">
+      <div class="box2_s"></div>
+    </div>
+
+    <div class="f">
+      <div class="s1"></div>
+      <div class="s2">
+        <div class="s2_s"></div>
+      </div>
+    </div>
+
+    <div class="t">
+      <div class="t_s1"></div>
+      <div class="t_s2">
+        <div class="t_s2s"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>三栏布局,左右固定,中间宽度自适应</title>
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box2_s1,
+      .box2_s2,
+      .s2_s1,
+      .s2_s2,
+      .t_s2s1,
+      .t_s2s2 {
+        width: 50px;
+        height: 50px;
+        background: #000;
+      }
+      .box2_s1,
+      .s2_s1,
+      .t_s2s1 {
+        float: left;
+      }
+      .box2_s2,
+      .s2_s2,
+      .t_s2s2 {
+        float: right;
+      }
+
+
+
+
+
+      .box1,
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      .box1 {
+        float: left;
+      }
+      .box3 {
+        float: right;
+      }
+      .box2 {
+        height: 200px;
+        background: blue;
+        margin: 0 200px;
+      }
+
+
+
+      .f {
+        margin-top: 100px;
+        position: relative;
+      }
+      .s1,
+      .s3 {
+        width: 200px;
+        height: 200px;
+        background: red;
+        position: absolute;
+      }
+      .s1 {
+        left: 0;
+      }
+      .s3 {
+        right: 0;
+      }
+      .s2 {
+        height: 200px;
+        position: absolute;
+        left: 200px;
+        right: 200px;
+        background: blue;
+      }
+
+
+
+      .t {
+        margin-top: 400px;
+        /* 不能设置margin-top为其它值,否则会与上面的f发生冲突 */
+        
+        display: flex;
+      }
+      .t_s1,
+      .t_s3 {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      .t_s2 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        height: 200px;
+        background: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box1"></div>
+    <div class="box3"></div>
+    <div class="box2">
+      <div class="box2_s1"></div>
+      <div class="box2_s2"></div>
+    </div>
+    <!-- box2是块元素,占据box3的位置,所以应该写在box3后面,box1,box3不占位置 -->
+
+    <div class="f">
+      <div class="s1"></div>
+      <div class="s2">
+        <div class="s2_s1"></div>
+        <div class="s2_s2"></div>
+      </div>
+      <div class="s3"></div>
+    </div>
+
+    <div class="t">
+      <div class="t_s1"></div>
+      <div class="t_s2">
+        <div class="t_s2s1"></div>
+        <div class="t_s2s2"></div>
+      </div>
+      <div class="t_s3"></div>
+    </div>
+
+  </body>
+</html>

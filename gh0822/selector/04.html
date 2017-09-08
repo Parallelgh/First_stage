@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>和css中的伪类选择器一致</title>
+  </head>
+  <body>
+
+    <ul class="one">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <p>p元素</p>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script>
+
+      $(".one li:first-child").css("color", "red");  //意如其名
+      $(".one li:first-of-type").css("color", "red");
+      /*
+      如果ul的第一个不是li，则first-child无效果
+      first-of-style是从第一个li计数
+      */
+
+      $(".one li:nth-child(5)").css("font-size", "50px");
+      $(".one li:eq(4)").css("font-size", "50px");
+      /*
+      nth是从１开始计数，其它选择器都是从０开始
+      nth-child不管子类元素是什么
+      eq只匹配同类
+      */
+
+      $(".one li:nth-child(2n)").css("border", "1px solid red");
+      $("li:nth-child(2n+1)").css("border", "1px solid green");
+      /*
+      :nth-child 伪类可以传递表达式
+      n从０开始, 不是ul的子类元素p也参与计算行数
+      但是不对它们进行以上操作
+      */
+
+      $(".one li:nth-of-type(5)").css("color", "gray");
+      $(".one li:nth-child(5)").css("color", "gray");
+      /*
+      nth-of-type 指的是父级元素中第五个li元素，不管中间夹杂什么标签，只要有第五个li元素被找到，就会有颜色变化
+      nth-child　指的是父级元素中第五行元素，但它不是li元素，所以无变化
+      */
+
+    </script>
+  </body>
+</html>

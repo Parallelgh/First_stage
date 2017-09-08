@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 用position定位，左右可以用已固定的元素宽度设置，确保自身宽度自适应 -->
+    <meta charset="utf-8">
+    <title>３栏布局，两侧固定，中间自适应</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      div {
+        position: relative;
+      }
+
+      .box1,.box3 {
+        background: red;
+        width: 200px;
+        height: 200px;
+      }
+
+      .box1,#box1 {
+        float: left;
+      }
+      .box3,#box2 {
+        float: right;
+      }
+      .box2 {
+        height: 200px;
+        background: blue;
+        position: absolute;
+        left: 200px;
+        right: 200px;
+      }
+      #box1,#box2 {
+        background: black;
+        width: 100px;
+        height: 100px;
+      }
+
+    </style>
+  </head>
+    <body>
+      <div>
+        <div class="box1"></div>
+        <div class="box2">
+          <div id="box1"></div>
+          <div id="box2"></div>
+        </div>
+        <div class="box3"></div>
+      </div>
+  </body>
+</html>-

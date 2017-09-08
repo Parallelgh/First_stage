@@ -1,0 +1,8 @@
+$color: pink;
+
+.three {
+  background: $color;
+  &:hover {
+    background: blue;
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>钟表</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .clock {
+        width: 400px;
+        height: 400px;
+        box-sizing: border-box;
+        margin: 200px auto;
+        padding: 45px 45px;
+        background: #6d8346;
+        position: relative;
+      }
+
+      #DIAL {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 10px solid #fdb933;
+        z-index: 2;
+      }
+
+      .line1,
+      .line2,
+      .line3,
+      .line4,
+      .line5,
+      .line6 {
+        background: gray;
+        /* 如果设置成color无效果 */
+
+        opacity: 0.6;
+        width: 4px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 55px;
+      }
+      .line1,
+      .line4 {
+        width: 7px;
+      }
+      .line2 {
+        transform: rotate(30deg);
+      }
+      .line3 {
+        transform: rotate(60deg);
+      }
+      .line4 {
+        transform: rotate(90deg);
+      }
+      .line5 {
+        transform: rotate(120deg);
+      }
+      .line6 {
+        transform: rotate(150deg);
+      }
+
+      .fix {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: #d1c7b7;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -120px;
+        margin-left: -120px;
+      }
+
+      .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        margin-top: 145px;
+        margin-left: -7px;
+        z-index: 2;
+      }
+
+      .hour {
+        width: 7px;
+        height: 90px;
+        background: #f2eada;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        animation: run 43200s infinite;
+        transform-origin: bottom center;
+      }
+
+      .min {
+        width: 4px;
+        height: 120px;
+        background: #f2eada;
+        position: absolute;
+        top: 14%;
+        left: 50%;
+        animation: run 3600s infinite;
+        transform-origin: bottom center;
+      }
+
+      .sec {
+        width: 1px;
+        height: 140px;
+        background: #f2eada;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        animation: run 60s steps(60) infinite;
+        transform-origin: bottom center;
+      }
+
+      @keyframes run {
+        0% {}
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="clock">
+      <div id="DIAL"></div>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <div class="line4"></div>
+      <div class="line5"></div>
+      <div class="line6"></div>
+      <div class="fix"></div>
+      <div class="dot"></div>
+      <div class="hour"></div>
+      <div class="min"></div>
+      <div class="sec"></div>
+    </div>
+
+  </body>
+
+</html>

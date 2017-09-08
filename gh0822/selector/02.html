@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>js特有选择器</title>
+  </head>
+  <body>
+
+    <ul class="one">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+
+    <ul class="two">
+      <li>1</li>
+      <li class="two_s">2</li>
+      <li>3</li>
+      <div>
+        4
+        <li>9</li>
+      </div>
+      <div class="two_s">4</div>
+      <li>4</li>
+      <li>7</li>
+      <li class="two_s">8</li>
+    </ul>
+
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script>
+
+      //:even 偶数(从０开始)
+      //:odd 奇数
+      //实际对应的行数 even 对应　奇数行
+      //             odd  对应  偶数行
+      // $(".one li:even").css("color", "red");
+      // $(".one li:odd").css("font-size", "50px");
+      //
+      // //:eq(index(指针)), index 从０开始, 只把符合条件的元素计数
+      // //上述　.two　中, 从０开始计数，符合 li 标签的第三个
+      // $(".two li:eq(4)").css("border", "1px solid red");
+
+      //:not(selector), 除去其中class=two_s所有的li，包括孙子，不管谁的孙子
+      //div不包括其中
+      $(".two li:not(two_s)").css("color", "red");
+
+
+    </script>
+  </body>
+</html>

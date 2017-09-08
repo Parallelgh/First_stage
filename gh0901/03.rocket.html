@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>火箭</title>
+  <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ground {
+      width: 1920px;
+      height: 950px;
+      background-color: #90d7ec;
+    }
+
+    .sun {
+      width: 150px;
+      height: 150px;
+      margin: 100px;
+      background: radial-gradient(100px at center, rgb(201, 83, 66), rgb(244, 239, 129));
+      border-radius: 50%;
+      box-shadow: 20px 20px 16px rgb(194, 201, 134), -20px -20px 16px rgb(194, 201, 134), -10px 15px 16px rgb(194, 201, 134), 20px -20px 16px rgb(194, 201, 134);
+      float: left;
+    }
+
+    .ground:hover .rocket {
+      left: 90%;
+      top: 0;
+    }
+
+    .cloud1,
+    .cloud2 {
+      background-color: rgba(202, 223, 217, 0.8);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      box-shadow: 50px 0 1px rgba(202, 223, 217, 0.8),100px 0 1px rgba(202, 223, 217, 0.8),150px 50px 1px rgba(202, 223, 217, 0.8),50px 50px 1px rgba(202, 223, 217, 0.8),100px 50px 1px rgba(202, 223, 217, 0.8);
+      float: left;
+      transition: all 5s;
+    }
+    .cloud1 {
+      margin: 200px;
+    }
+    .cloud2 {
+      margin: 300px 100px;
+    }
+    .ground:hover .cloud1,
+    .ground:hover .cloud2 {
+      transform: translate(200px);
+    }
+
+    .rocket {
+      background: url("./image0/rocket.png");
+      width: 101px;
+      height: 190px;
+      position: absolute;
+      top: 90%;
+      left: 0;
+      transform: rotate(45deg);
+      transition: all 3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ground">
+    <div class="sun"></div>
+    <div class="cloud1"></div>
+    <div class="cloud2"></div>
+
+    <div class="rocket"></div>
+  </div>
+</body>
+
+</html>

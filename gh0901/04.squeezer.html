@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>扑克牌</title>
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .part {
+        position: relative;
+        width: 155px;
+        height: 219px;
+        margin: 200px auto;
+        z-index: 10;
+      }
+
+      .first,
+      .second,
+      .third,
+      .fourth,
+      .fifth,
+      .sixth {
+        width: 155px;
+        height: 219px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: left top;
+        transition: all 2s;
+        background: url("./image0/pk1.png");
+
+        /*
+        控制背景图片如何填充，有两个属性值
+        cover 超出部分会被隐藏
+        contain　会按比例缩放
+        */
+        background-size: contain;
+      }
+      .part:hover .first {
+        transform: rotate(60deg);
+      }
+      .part:hover .second {
+        transform: rotate(120deg);
+      }
+      .part:hover .third {
+        transform: rotate(180deg);
+      }
+      .part:hover .fourth {
+        transform: rotate(240deg);
+      }
+      .part:hover .fifth {
+        transform: rotate(300deg);
+      }
+      .part:hover .sixth {
+        transform: rotate(360deg);
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="part">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+      <div class="fourth"></div>
+      <div class="fifth"></div>
+      <div class="sixth"></div>
+    </div>
+
+  </body>
+</html>

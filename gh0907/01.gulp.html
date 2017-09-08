@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>gulp响应式</title>
+
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+
+    <style media="screen">
+
+      .navbar {
+        background: #cf4646;
+        border-color: #cf4646;
+        border-radius: 0;
+        margin-bottom: 0;
+      }
+      .navbar-default a {
+        color: #e8e8e8 !important;
+      }
+      a:hover {
+        color: #fff !important;
+      }
+
+      .middle {
+        text-align: center;
+        background-color: #cf4646;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width:768px) {
+        .middle {
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+      }
+      .logo {
+        margin-top: 50px;
+      }
+      .middle p {
+        font-size: 20px;
+        color: #fff;
+        margin-top: 10px;
+      }
+      .btn {
+        margin-top: 50px;
+      }
+      .btn-default,
+      .btn:hover,
+      .btn:active,
+      .btn:focus {
+        color: #efbfbf;
+        background-color: transparent;
+      }
+
+      .col-md-6 {
+        margin-top: 50px;
+      }
+      .col-md-6 p {
+        font-size: 18px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Gulp 中文网</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">中文文档</a></li>
+            <li><a href="#">入门指南</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">插件开发</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">使用技巧</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="middle">
+      <img class="logo" src="./img/gulp-white-text.svg" width="200px" height="121px">
+      <p>用自动化构建工具增强你的工作流程！</p>
+      <a class="btn btn-lg btn-default btn-getting-started" role="button" href="#">开始使用</a>
+    </div>
+
+    <div class="container">
+      <div class="col-md-6">
+        <h2>易于使用</h2>
+        <p>通过代码优于配制的策略，Gulp　让简单的任务简单，复杂的任务可管理．</p>
+      </div>
+      <div class="col-md-6">
+        <h2>构建快速</h2>
+        <p>利用　Node.js 流的威力，你可以快速构建项目并减少频繁的　IO 操作．</p>
+      </div>
+      <div class="col-md-6">
+        <h2>插件高质</h2>
+        <p>Gulp　严格的插件指南确保插件如你期望的那样简介高质地工作．</p>
+      </div>
+      <div class="col-md-6">
+        <h2>易于学习</h2>
+        <p>通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道．</p>
+      </div>
+    </div>
+
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+
+  </body>
+</html>

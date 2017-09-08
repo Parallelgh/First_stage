@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jd_login</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .w {
+        width: 1210px;
+        margin: 0 auto;
+      }
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      body {
+        color: #666;
+      }
+
+      .head {
+        height: 110px;
+        background: url("./jd-login/headbg.jpg") repeat-x left bottom;
+      }
+      .logo {
+        width: 160px;
+        height: 50px;
+        float: left;
+        margin-top: 24px;
+          background: url(./jd-login/icon.png);
+      }
+      .welcome {
+        float: left;
+        height: 34px;
+        line-height: 34px;
+        font-size: 24px;
+        color: #333;
+        padding-left: 30px;
+        margin-top: 34px;
+      }
+      .head .right {
+        float: right;
+        font-size: 16px;
+        margin-top: 55px;
+        color: #999;
+      }
+      #login {
+        color: #333;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      #login:hover {
+        text-decoration: underline;
+      }
+
+      .subject {
+        margin: 50px auto 60px;
+        width: 830px;
+        height: 605px;
+      }
+      .subject .sl {
+        width: 400px;
+        float: left;
+      }
+      .form_item {
+        border: solid 1px #ddd;
+        width: 398px;
+        height: 52px;
+      }
+      .form_item lable {
+        float: left;
+        width: 90px;
+        height: 52px;
+        line-height: 52px;
+        padding-left: 20px;
+      }
+      .form_item text {
+        line-height: 46px;
+        margin-left: 20px;
+        margin-top: 2px;
+        font-size: 15px;
+        color: rgb(204, 204, 204);
+        position: absolute;
+        z-index: 1;
+      }
+      #textField {
+        border: 0 none;
+        font-size: 14px;
+        width: 190px;
+        height: 19px;
+        padding-bottom: 11px;
+        padding-left: 20px;
+        padding-top: 16px;
+      }
+      #hidden {
+        color: #c5c5c5;
+        height: 27px;
+        font-size: 12px;
+        padding-top: 5px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="w clearfix">
+        <a href="https://www.jd.com" class="logo"></a>
+        <div class="welcome">欢迎注册</div>
+        <div class="right">
+          已有账户?
+          <a id="login" href="https://passport.jd.com/new/login.aspx">请登录</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="w">
+        <div class="subject clearfix">
+          <div class="sl">
+            <div class="form_item">
+              <lable>用　户　名</lable>
+              <input id="textField" type="text" placeholder="您的账户名和登录名">
+            </div>
+            <div id="hidden">
+              <span></span>
+            </div>
+            <div class="form_item">
+              <lable>设 置 密 码</lable>
+              <input id="textField"  type="password" placeholder="建议至少使用两种字符组合">
+            </div>
+            <div id="hidden">
+              <span></span>
+            </div>
+            <div class="form_item">
+              <lable>确 认 密 码</lable>
+              <input id="textField" placeholder="请再次输入密码" type="passwd">
+            </div>
+            <div id="hidden">
+              <span></span>
+            </div>
+            <div class="form_item">
+              <lable>中国 0086</lable>
+              <input id="textField" placeholder="建议使用常用手机" type="number">
+            </div>
+            <div id="hidden">
+              <span></span>
+            </div>
+            <div class="form_item">
+              <lable>验　证　码</lable>
+              <input id="textField" placeholder="请输入验证码" type="number">
+            </div>
+            <div id="hidden">
+              <span></span>
+            </div>
+            <div class="form_item">
+              <lable>手机验证码</lable>
+              <input id="textField" placeholder="请输入手机验证码" type="text">
+            </div>
+            <div id="hidden">
+              <span></span>
+            </div>
+            <div class="form_item">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="sr"></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"></div>
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>
