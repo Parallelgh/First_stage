@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>数组去重</title>
+  </head>
+
+  <body>
+
+    <!--
+    数组去重方法:
+      定义一个空数组，
+      依次往数组中存入数据，
+      空数组中没有的话push
+      用indexOf检测
+    -->
+
+    <script type="text/javascript">
+
+      var arr = [];
+      function uniqueArr(array){
+        for(var i = 0, len = array.length; i < len; i ++){
+          if(arr.indexOf(array[i]) === -1){
+            arr.push(array[i]);
+          }
+        }
+
+        return arr;
+      };
+
+      var result = uniqueArr([1, 2, 4, 5, 6, 3, 4, 6, 6, 7, 3, 1]);
+      console.log(result);
+
+    </script>
+
+  </body>
+
+</html>

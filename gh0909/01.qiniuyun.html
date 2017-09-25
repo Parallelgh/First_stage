@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>七牛云</title>
+
+    <link rel="stylesheet" href="./bootstrap/">
+
+    <style media="screen">
+
+      .navbar {
+        height: 68px;
+        border: none;
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+        background-color: transparent;
+      }
+      .navbar:hover {
+        background-color: #333;
+      }
+      .navbar li  .menu-title {
+        color: #97989c;
+        background-color: rgba(229, 229, 229, 0.06);
+        padding: 2px 0 2px 20px;
+        font-size: 12px;
+      }
+      .navbar-default .navbar-nav>li>a {
+        color: #FFF;
+      }
+      .navbar-default .navbar-nav>li>a:hover {
+        color: #00a0de;
+      }
+      @media screen and (min-width: 768px) {
+        .navbar-default .navbar-nav>li>a {
+          padding-top: 20px;
+        }
+      }
+      .btn {
+        margin-top: 12px;
+        margin-right: 10px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+      }
+      .btn-hollow {
+        color: #FFF;
+        background-color: transparent;
+        border-color: #FFF;
+      }
+      .btn-hollow:hover {
+        background-color: #FFF;
+        color: #00a0de;
+      }
+      .btn-primary {
+        color: #fff;
+        background-color: #00A0DE;
+        border-color: #008ec5;
+        margin-right: 0;
+      }
+
+
+      .carousel {
+        margin-bottom: 150px;
+      }
+      .carousel .item{
+        width: 100%;
+        height: 545px;
+      }
+      .carousel .item:nth-child(1) {
+        background: url("./img/1.jpg");
+      }
+      .carousel .item:nth-child(2) {
+        background: url("./img/2.jpg") center;
+        background-size: cover;
+      }
+      .carousel .item:nth-child(3) {
+        background: url("./img/3.jpg") center;
+        background-size: cover;
+      }
+      .middle-container {
+        margin-top: 165px;
+      }
+      .middle-container h2,
+      .middle-container p {
+        color: #FFF;
+      }
+      .middle-container h2 {
+        margin-bottom: 30px;
+      }
+      .carousel-inner .btn-banner {
+        height: 50px;
+        width: 100px;
+        font-size: 18px;
+        padding: 13px;
+      }
+      .carousel-inner .item:nth-child(2) .btn {
+        position: absolute;
+        left: 50%;
+        bottom: 20%;
+      }
+      .carousel-inner .item:nth-child(3) .banner-desc-right {
+        color: #FFF;
+        position: absolute;
+        bottom: 30%;
+        right: 25%;
+      }
+      .carousel-inner .item:nth-child(3) .highlight-desc {
+        background: #3f66cf;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+      }
+
+
+      .features .row {
+        padding: 0 30px;
+        margin-top: 40px;
+      }
+      .fea-left,
+      .fea-right {
+        display: table-cell;
+      }
+      .fea-left {
+        width: 170px;
+        height: 170px;
+        padding-right: 30px;
+      }
+      .fea-left img {
+        width: 140px;
+        height: 140px;
+      }
+      .fea-right {
+        vertical-align: top;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo-white-18da5fcb02f4aa87dacbf4451a7356b6179baebc96ae77cf24f607c98d12d100.png" width="100" alt="">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">产品</a>
+              <ul class="dropdown-menu">
+                <li class="menu-title">基础服务</li>
+                <li>
+                  <a href="#">
+                    <h4>对象存储</h4>
+                    <p>高可用．易扩展．低成本．一站式</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>融合　CDN</h4>
+                    <p>融合优质节点．可监控．智能调度的内容分发服务</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>容器云<small>(即将上线)</small></h4>
+                    <p>面向微服务架构的企业级容器管理平台</p>
+                  </a>
+                </li>
+                <li class="menu-title">数据~智能</li>
+                <li>
+                  <a href="#">
+                    <h4>深度学习平台</h4>
+                    <p>针对图片视频的一站式数据集中处理．模型训练平台</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>大数据</h4>
+                    <p>简单．高效．开放</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>智能多媒体　API</h4>
+                    <p>针对海量图片视频提供鉴黄鉴暴．人脸技术．物体识别等服务</p>
+                  </a>
+                </li>
+                <li class="menu-title">视频服务</li>
+                <li>
+                  <a href="#">
+                    <h4>直播云</h4>
+                    <p>提供全球化实时流服务和端直播场景解决方案</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>点播云</h4>
+                    <p>提供上传．存储．转码分发．播放器等服务的一站式点播服务</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">解决方案</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    <h4>私有云解决方案</h4>
+                    <p>可定制化的数百 PB 级别．高可靠．强安全的存储系统</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>非结构化数据管理解决方案</h4>
+                    <p>提供大批量文件打包上传．文档检索．多媒体数据处理等服务</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>短视频解决方案</h4>
+                    <p>集成完整云端能力及卓越采集端．播放端功能的一站式短视频解决方案</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>智能云相册解决方案</h4>
+                    <p>满足智能硬件厂商各应用场景下云端计算需求</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>智能硬件与物联网解决方案</h4>
+                    <p>满足智能硬件厂商各应用场景下云端计算需求</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>广电传媒解决方案</h4>
+                    <p>满足传统媒体向融合媒体转型需求，构建全媒体资源管理管理系统</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>安防解决方案</h4>
+                    <p>灵活部署，满足不同安防场景互联网远程监控需求</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>互联网与移动互联网解决方案</h4>
+                    <p>为互联网初创企业量身定制，一站式计算服务平台</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <h4>应用质量监控解决方案</h4>
+                    <p>满足移动及视频应用性能管理需求，可定制化的质量监控平台</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">价格</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">管理控制台</a></li>
+              <li><a href="#">开发者中心</a></li>
+              <li><a href="#">热门活动</a></li>
+              <li>
+                <div class="login">
+                  <a class="btn btn-hollow" href="#">登录</a>
+                  <a class="btn btn-primary" href="#">注册有礼</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="container">
+            <div class="middle-container">
+              <div class="col-sm-6">
+                <div class="banner-desc">
+                  <h2>短视频解决方案重磅上线</h2>
+                  <p>小身材大功能，短视频开发从未如此简单</p>
+                  <a class="btn btn-hollow btn-banner" href="#">查看详情</a>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="right-mask-banner">
+                  <img width="402px" height="auto" src="./img/1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <a class="btn btn-hollow btn-banner" href="#">查看详情</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="banner-desc-right">
+              <h3>七牛推出</h3>
+              <p class="highlight-desc">私有云存储解决方案</p>
+              <p>能够针对企业客户场景进行灵活地部署和运维</p>
+              <a class="btn btn-hollow btn-banner" href="#">点击咨询</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="features">
+      <div class="container">
+        <div class="title text-center">
+          <h2>持续挖掘海量数据的无限价值</h2>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="fea-left">
+              <img src="./img/3.png" alt="">
+            </div>
+            <div class="fea-right">
+              <h4>海量存储</h4>
+              <p>所有数据都有有效期，面对不断膨胀的数据领域，数据如何管理？七牛云完全自主知识产权的对象存储，已经过最严酷的考验，为 EB 规模的数据存储做好充分准备。</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="fea-left">
+              <img src="./img/4.png" alt="">
+            </div>
+            <div class="fea-right">
+              <h4>数据洞察</h4>
+              <p>让数据从负担变成资产的关键步骤是数据的价值挖掘</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="fea-left">
+              <img src="./img/5.png" alt="">
+            </div>
+            <div class="fea-right">
+              <h4>加速运输</h4>
+              <p>七牛云独家的融合CDN结合了主流CDN和自建CDN节点的优势</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="fea-left">
+              <img src="./img/6.png" alt="">
+            </div>
+            <div class="fea-right">
+              <h4>高性能计算</h4>
+              <p>为了能让数据流转，我们需要对数据进行高速处理</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature fea-solution">
+      <div class="container">
+        <div class="title">
+          <h2>一站式视频点播和直播解决方案</h2>
+          <p>集成存储与融合CDN，汇聚七牛强大的数据处理能力，提供直播</p>
+          <p>
+            <a href="#">直播</a>
+            <a href="#">点播</a>
+          </p>
+        </div>
+        <div class="content">
+          <div class="col-md-3 col-sm-6">
+            <img src="./img/7.png" alt="">
+            <div class="con-bottom">
+              <h4>流畅</h4>
+              <p>视频方案的基础在于播放的流畅性</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <img src="./img/8.png" alt="">
+            <div class="con-bottom">
+              <h4>高效</h4>
+              <p>提供端到端的完整方案</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <img src="./img/9.png" alt="">
+            <div class="con-bottom">
+              <h4>低成本</h4>
+              <p>我们采用了各种可靠的技术方式</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <img src="./img/10.png" alt="">
+            <div class="con-bottom">
+              <h4>可控</h4>
+              <p>充分发挥大数据和机器学习的优势</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feature features-cases">
+      <div class="container">
+        <div class="title">
+          <h2>各行各业的成功案例</h2>
+        </div>
+        <div class="content"></div>
+      </div>
+    </div>
+
+    <div class="feature features-hotnews">
+      <div class="container">
+        <div class="title">
+          <h2>热门动态</h2>
+        </div>
+        <div class="content">
+          <div class="col-sm-3">
+            <ul>
+              <li><a href="#">新闻动态</a></li>
+              <li><a href="#">产品动态</a></li>
+              <li><a href="#">近期福利</a></li>
+              <li><a href="#">更多内容 ></a></li>
+            </ul>
+          </div>
+          <div class="col-sm-9">
+            <div class="col-sm-6 col-md-4">
+              <a href="#">
+                <img src="./img/11.png" alt="">
+                <div class="word">
+                  <time>2017 年　8 月 28 日发布在　新闻动态</time>
+                  <p>七牛云完成新一轮　10　亿元融资</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a href="#">
+                <img src="./img/12.png" alt="">
+                <div class="word">
+                  <time>2017 年　8 月 28 日发布在　新闻动态</time>
+                  <p>七牛云完成新一轮　10　亿元融资</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a href="#">
+                <img src="./img/13.png" alt="">
+                <div class="word">
+                  <time>2017 年　8 月 28 日发布在　新闻动态</time>
+                  <p>七牛云完成新一轮　10　亿元融资</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="./jquery/jquery.min.js" charset="utf-8"></script>
+    <script src="./bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(".carousel").carousel({
+        interval: 2000
+      });
+    </script>
+  </body>
+</html>

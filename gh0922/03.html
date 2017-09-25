@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>两栈实现队列</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      // function Queue(num) {
+      //   var stack1 = [];
+      //   var stack2 = [];
+      //   stack1.push(num);
+      //   console.log(stack1);
+      //
+      //   if (stack2.length != 0){
+      //     stack1.push(stack2.pop());
+      //     for(var i = 0, len = stack1.length; i < len.length; i ++){
+      //       stack2.push(stack1.pop());
+      //     }
+      //     return stack2.pop();
+      //   }
+      //   else {
+      //     for(var i = 0, len = stack1.length; i < len.length; i ++){
+      //     stack2.push(stack1.pop());
+      //     }
+      //     return stack2.pop();
+      //   }
+      // }
+
+      function Stack(){
+        var item = [];
+        this.push = function (node){
+            item.push(node);
+        };
+        this.pop = function (){
+            return item.pop();
+        }
+        this.isEmpty = function (){
+            return item.length===0;
+        }
+    }
+
+    var stack1 = new Stack();
+    var stack2 = new Stack();
+
+    function push(node)
+    {
+        stack1.push(node);
+    }
+    function pop()
+    {
+            if(stack1.isEmpty() && stack2.isEmpty()){
+            throw new Error("Queue is empty");
+        }
+        if(stack2.isEmpty()){
+           while(!stack1.isEmpty()){
+               stack2.push(stack1.pop());
+           }
+        }
+
+        return stack2.pop();
+
+    }
+
+
+
+      Queue(1,2,3,4,5,6,7);
+
+    </script>
+  </body>
+</html>

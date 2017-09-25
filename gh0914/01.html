@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function removeEvent(elem,type,handler){
+
+        //判断是否支持该方法，支持就为true，不支持就为false
+        if (elem.removeEventListener){
+          elem.removeEventListener(type, handler,false);
+        } else if (elem.detachEvent){
+          elem.detachEvent('on' + type, handler);
+        } else {
+          elem['on' + type] = handler;
+        }
+      }
+
+      var btn = document.getElementById("btn");
+      removeEvent(btn,'click', function(){
+        console.log("btn 点击。。。。。");
+      });
+
+      removeEvent(btn,'dblclick', function(){
+        console.log("btn 双击。。。。。");
+      });
+    </script>
+
+  </body>
+</html>
